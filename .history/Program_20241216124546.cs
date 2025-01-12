@@ -1,0 +1,98 @@
+﻿using System;
+using System.Formats.Asn1;
+using System.Security.Cryptography;
+using System.Text.RegularExpressions;
+using System.Collections;
+using System.Runtime.Intrinsics.X86;
+
+// public class Box<T>{
+//     public T n;
+
+//     public Box(T t){
+//         n = t;
+//     }
+//     public void P(){
+//         Console.WriteLine(n);
+//     }
+// }
+
+// public interface CustomI{
+//     public void X();
+// }
+
+// public class Box2<T> : CustomI{
+//     T tt;
+
+//     public Box2(T t){
+//         tt = t;
+//     }
+//     public void X(){
+//       if (typeof(T).IsClass){
+//         Console.WriteLine("It is a class");
+//       }
+//       else{
+//         Console.WriteLine("It is not a class");
+//       }
+//     }
+// }
+
+// public class B{
+
+// }
+
+
+//Generic interface
+public interface Gen<T>{
+   public void X(T t);
+}
+
+public class B1 : Gen<int>{
+  public void X(int t){
+    Console.WriteLine(t);
+  }
+}
+
+public class B2 : Gen<string>{
+  public void X(string t){
+    Console.WriteLine(t);
+  }
+}
+
+
+class Program
+{
+    //Generic methods 
+    // public static void Log<T>(T t){
+    //     Console.WriteLine(t);
+    // }
+
+    // public static T Log1<T>(T t){
+    //     return t;
+    // }
+    static void Main(string[] args)
+    {
+      //Generic method call  
+    //   Console.WriteLine(Log1(10));
+    //   Log("Aditya");
+
+    //Generic class call
+    // Box<int> b = new Box<int>(11);
+    // Box<string> b1 = new Box<string>("Aditya");
+    // b.P();
+    // b1.P();
+
+    // Box2<int> b3 = new Box2<int>(1);
+    // Box2<B> b4 = new Box2<B>(new B());
+
+    // b3.X();
+    // b4.X();
+
+
+
+
+    }
+
+}  
+
+
+
